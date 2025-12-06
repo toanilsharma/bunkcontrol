@@ -1,0 +1,21 @@
+{
+  "name": "Bunk Control 🚀",
+  "short_name": "Bunk Control",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#2563EB",
+  "description": "Never fall below 75% again. The #1 free college attendance tracker.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2921/2921222.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2921/2921222.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
