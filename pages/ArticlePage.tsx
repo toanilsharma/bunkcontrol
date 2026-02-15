@@ -3,6 +3,7 @@ import { useNav } from '../contexts/NavigationContext';
 import { articles } from '../data/articles';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { ClockIcon, ShareIcon, CheckCircleIcon, BookIcon } from '../components/icons';
 
 const ArticlePage: React.FC = () => {
@@ -112,10 +113,33 @@ const ArticlePage: React.FC = () => {
     });
   };
 
-  if (!article) return null;
+  if (!article) {
+    return (
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+            <SEO title="Article Not Found | Bunk Control" description="The requested article could not be found." />
+            <div className="text-center">
+                <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Article not found</h1>
+                <button 
+                    onClick={() => navigateTo('resources')}
+                    className="text-blue-600 hover:underline"
+                >
+                    Back to Resources
+                </button>
+            </div>
+        </div>
+    );
+  }
+
+  const ArticleIcon = article.icon;
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
+      <SEO 
+        title={`${article.title} | Bunk Control`} 
+        description={article.subtitle}
+        canonical={`/?page=article&id=${article.id}`}
+        type="article"
+      />
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1.5 bg-gray-100 dark:bg-gray-800 z-[60]">
         <div 

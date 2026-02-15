@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const TermsPage: React.FC = () => {
   useEffect(() => {
@@ -10,6 +11,11 @@ const TermsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col transition-colors duration-300">
+      <SEO 
+        title="Terms of Service | Bunk Control" 
+        description="Review the Terms of Service for using Bunk Control. Appropriate usage, data responsibility, and liability limitations."
+        canonical="/?page=terms"
+      />
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">

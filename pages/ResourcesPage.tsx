@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { useNav } from '../contexts/NavigationContext';
 import { articles } from '../data/articles';
 import { ArrowRightIcon } from '../components/icons';
@@ -16,6 +17,11 @@ const ResourcesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col transition-colors duration-300">
+      <SEO 
+        title="Student Resources & Guides | Bunk Control" 
+        description="Explore expert guides, attendance hacks, and college survival strategies in the Bunk Control Student Success Hub."
+        canonical="/?page=resources"
+      />
       <Header />
       
       <main className="flex-grow container mx-auto px-4 py-12">

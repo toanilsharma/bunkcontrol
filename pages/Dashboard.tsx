@@ -16,6 +16,7 @@ import TodaysClasses from '../components/TodaysClasses';
 import QuickStats from '../components/QuickStats';
 import Toast from '../components/Toast';
 import Badges from '../components/Badges';
+import SEO from '../components/SEO';
 
 // Lazy load modals to improve performance
 const EditSubjectModal = lazy(() => import('../components/EditSubjectModal'));

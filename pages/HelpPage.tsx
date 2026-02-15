@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { MockAddForm, MockCalculator, MockEditForm, MockSubjectCard } from '../components/Mocks';
 import {
     BrainIcon, TargetIcon, EditIcon, DocumentDownloadIcon,
@@ -38,6 +39,11 @@ Computer Science,Friday,15:00`;
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col transition-colors duration-300">
+            <SEO 
+                title="User Guide | Bunk Control" 
+                description="Master Bunk Control features: learn how to add subjects, import timetables, mark attendance, and use the GPA calculator."
+                canonical="/?page=help"
+            />
             <Header />
 
             <main className="flex-grow container mx-auto px-4 py-12">

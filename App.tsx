@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { NavigationProvider, useNav } from './contexts/NavigationContext';
 import Loading from './components/Loading';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load pages to improve initial load time
 const LoginPage = lazy(() => import('./pages/LoginPage'));
@@ -46,13 +47,15 @@ const AppContent: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider>
-      <NavigationProvider>
-        <AuthProvider>
-          <AppContent />
-        </AuthProvider>
-      </NavigationProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <NavigationProvider>
+          <AuthProvider>
+            <AppContent />
+          </AuthProvider>
+        </NavigationProvider>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 };
 

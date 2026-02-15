@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { MailIcon } from '../components/icons';
 
 const ContactPage: React.FC = () => {
@@ -11,6 +12,11 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col transition-colors duration-300">
+      <SEO 
+        title="Contact Us | Bunk Control" 
+        description="Get in touch with the Bunk Control team for feedback, support, or inquiries."
+        canonical="/?page=contact"
+      />
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12 flex items-center justify-center">
         <div className="max-w-2xl w-full bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 text-center">

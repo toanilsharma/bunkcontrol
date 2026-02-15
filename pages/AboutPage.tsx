@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { useNav } from '../contexts/NavigationContext';
 
 const AboutPage: React.FC = () => {
@@ -13,6 +14,11 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col transition-colors duration-300">
+      <SEO 
+        title="About Us | Bunk Control" 
+        description="Learn about the mission of Bunk Control: empowering students to manage their attendance smartly and stress-free."
+        canonical="/?page=about"
+      />
       <Header />
       <main className="flex-grow container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">

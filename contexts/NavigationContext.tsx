@@ -71,23 +71,7 @@ export const NavigationProvider: React.FC<{ children: ReactNode }> = ({ children
   }, []);
 
   // Update Page Title
-  useEffect(() => {
-    const titles: Record<Page, string> = {
-      home: 'Home | Bunk Control',
-      dashboard: 'Dashboard | Bunk Control',
-      help: 'User Guide | Bunk Control',
-      about: 'About Us | Bunk Control',
-      contact: 'Contact | Bunk Control',
-      privacy: 'Privacy Policy | Bunk Control',
-      terms: 'Terms of Service | Bunk Control',
-      resources: 'Student Resources & Guides | Bunk Control',
-      article: 'Article | Bunk Control'
-    };
-    
-    if (currentPage !== 'article') {
-        document.title = titles[currentPage] || 'Bunk Control 🚀';
-    }
-  }, [currentPage]);
+  // useEffect removed - now handled by SEO component (react-helmet-async)
 
   const navigateTo = (page: Page, params?: Record<string, string>) => {
     setCurrentPage(page);
